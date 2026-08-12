@@ -1,0 +1,13 @@
+# Copy to `.dev.vars` for local `wrangler dev`. Never commit the real `.dev.vars`.
+#
+# Get BOT_TOKEN from @BotFather. WEBHOOK_SECRET is any long random string you
+# generate (e.g. `openssl rand -hex 32`). Local webhook testing still requires
+# the Telegram secret-token header to match what you register via setWebhook.
+
+BOT_TOKEN=
+WEBHOOK_SECRET=
+SAMARATA_URL=https://samarata.my.id
+DEFAULT_NUDGE_DELAY_MIN=8
+DEFAULT_COOLDOWN_DAYS=2
+DEFAULT_LEAVE_TIME=12:15
+TIMEZONE_OFFSET_MINUTES=420

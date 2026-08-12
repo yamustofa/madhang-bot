@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# build artifacts
+dist
+.wrangler
+
+# tooling state (Mimosa scanner, ZCode, etc.) — not project source
+.mimosa
+.zcode
+
+# local secrets & env
+.dev.vars
+.env
+.env.local
+
+# logs
+*.log
+
+# os/editor noise
+.DS_Store
+Thumbs.db

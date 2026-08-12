@@ -1,0 +1,31 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "madhang",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-07-01",
+	"compatibility_flags": ["nodejs_compat"],
+	// Every-minute cron drives: passive fallback nudge, soft-deadline pings, auto-roll.
+	"triggers": {
+		"crons": ["* * * * *"]
+	},
+	// Non-secret config lives here. Secrets (BOT_TOKEN, WEBHOOK_SECRET) are set via
+	// `wrangler secret put` and are NOT listed here.
+	"vars": {
+		"SAMARATA_URL": "https://samarata.my.id",
+		"DEFAULT_NUDGE_DELAY_MIN": "8",
+		"DEFAULT_COOLDOWN_DAYS": "2",
+		"DEFAULT_LEAVE_TIME": "12:15",
+		"TIMEZONE_OFFSET_MINUTES": "420"
+	},
+	// Run `wrangler d1 create madhang`, then paste the returned database_id below.
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "madhang",
+			"database_id": "e36e9a4d-36b5-4d7d-a5a5-b6aaf6890a6d"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}
